@@ -43,13 +43,13 @@ import haxe.Http;
 
 // Threading
 #if neko
-private typedef Thread = neko.vm.Thread;
+private typedef Thread = sys.thread.Thread;
 private typedef Lib = neko.Lib;
 #elseif java
 private typedef Thread = java.vm.Thread;
 private typedef Lib = java.Lib;
 #elseif cpp
-private typedef Thread = cpp.vm.Thread;
+private typedef Thread = sys.thread.Thread;
 private typedef Lib = cpp.Lib;
 #end
 
