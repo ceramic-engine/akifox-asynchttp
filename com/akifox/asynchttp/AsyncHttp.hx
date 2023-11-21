@@ -441,7 +441,7 @@ class AsyncHttp {
       redirect = false;
 
       if (connected) {
-        redirect = (status == 301 || status == 302 || status == 303 || status == 307);
+        redirect = (status == 301 || status == 302 || status == 303 || status == 305 || status == 307 || status == 308);
         // determine if redirection
         if (redirect) {
           var newlocation = headers.get('location');
